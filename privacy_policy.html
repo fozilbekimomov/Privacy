@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Политика конфиденциальности — ArzonTOP</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #2E7D32;
+      --green-light: #43A047;
+      --bg: #F9FAFB;
+      --card: #FFFFFF;
+      --text: #1A1A2E;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+
+    header .logo {
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.85;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .lang-switch button {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 6px 18px;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .lang-switch button.active,
+    .lang-switch button:hover {
+      background: rgba(255,255,255,0.35);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .updated {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 32px;
+    }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 32px;
+    }
+
+    .toc h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li { margin-bottom: 6px; }
+
+    .toc a {
+      color: var(--green);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .section p {
+      color: #374151;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      color: #374151;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .list li:last-child { border-bottom: none; }
+
+    .list li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #DCFCE7;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-left: 8px;
+    }
+
+    .highlight {
+      background: #F0FDF4;
+      border-left: 4px solid var(--green);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 15px;
+      color: #374151;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .contact-card .icon { font-size: 24px; }
+
+    .contact-card a {
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+
+    @media (max-width: 600px) {
+      .section { padding: 20px 18px; }
+      .toc { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">💊</div>
+  <h1>ArzonTOP</h1>
+  <p id="header-sub">Политика конфиденциальности</p>
+  <div class="lang-switch">
+    <button class="active" onclick="setLang('ru')">Русский</button>
+    <button onclick="setLang('uz')">O'zbek</button>
+    <button onclick="setLang('en')">English</button>
+  </div>
+</header>
+
+<div class="container">
+  <p class="updated" id="updated-text">Последнее обновление: 19 марта 2026 г.</p>
+
+  <!-- ===== RUSSIAN ===== -->
+  <div class="lang-content active" id="lang-ru">
+
+    <nav class="toc">
+      <h3>Содержание</h3>
+      <ol>
+        <li><a href="#ru-1">Общая информация</a></li>
+        <li><a href="#ru-2">Собираемые данные</a></li>
+        <li><a href="#ru-3">Использование данных</a></li>
+        <li><a href="#ru-4">Хранение и безопасность</a></li>
+        <li><a href="#ru-5">Передача третьим лицам</a></li>
+        <li><a href="#ru-6">Права пользователей</a></li>
+        <li><a href="#ru-7">Cookies</a></li>
+        <li><a href="#ru-8">Дети</a></li>
+        <li><a href="#ru-9">Изменения политики</a></li>
+        <li><a href="#ru-10">Контакты</a></li>
+      </ol>
+    </nav>
+
+    <div class="section" id="ru-1">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <h2>1. Общая информация</h2>
+      </div>
+      <p>Добро пожаловать в <strong>ArzonTOP</strong> — приложение для поиска лекарств и ближайших аптек в Узбекистане.</p>
+      <p>Настоящая Политика конфиденциальности описывает, какие данные мы собираем, как используем и защищаем их при использовании нашего мобильного приложения (Android / iOS).</p>
+      <div class="highlight">
+        Используя приложение ArzonTOP, вы соглашаетесь с условиями настоящей Политики. Если вы не согласны — пожалуйста, не используйте приложение.
+      </div>
+    </div>
+
+    <div class="section" id="ru-2">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <h2>2. Собираемые данные</h2>
+      </div>
+      <ul class="list">
+        <li><strong>Номер телефона</strong> — используется для регистрации и авторизации через OTP-код.</li>
+        <li><strong>Имя и фамилия</strong> — указываются по желанию пользователя в профиле.</li>
+        <li><strong>Геопозиция</strong> — определяется для показа ближайших аптек. Запрашивается только при использовании функций карты.</li>
+        <li><strong>Избранные препараты и аптеки</strong> — хранятся локально на устройстве.</li>
+        <li><strong>История поиска</strong> — хранится локально для удобства использования.</li>
+        <li><strong>Данные об устройстве</strong> — версия ОС, модель устройства (в анонимном виде для диагностики).</li>
+      </ul>
+      <p style="margin-top:16px; color: var(--muted); font-size:14px;">* Мы <strong>не собираем</strong> платёжные данные, пароли или биометрическую информацию.</p>
+    </div>
+
+    <div class="section" id="ru-3">
+      <div class="section-header">
+        <div class="section-icon">🎯</div>
+        <h2>3. Использование данных</h2>
+      </div>
+      <ul class="list">
+        <li>Авторизация и управление аккаунтом</li>
+        <li>Отображение ближайших аптек и предложений на карте</li>
+        <li>Сортировка результатов по расстоянию от пользователя</li>
+        <li>Улучшение работы приложения и устранение ошибок</li>
+        <li>Отправка важных уведомлений, связанных с работой сервиса</li>
+      </ul>
+    </div>
+
+    <div class="section" id="ru-4">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <h2>4. Хранение и безопасность</h2>
+      </div>
+      <p>Мы принимаем технические и организационные меры для защиты ваших данных от несанкционированного доступа, изменения или утечки.</p>
+      <ul class="list">
+        <li>Передача данных осуществляется по защищённому протоколу <strong>HTTPS</strong></li>
+        <li>Токены авторизации хранятся в <strong>защищённом хранилище</strong> устройства (Keychain / Keystore)</li>
+        <li>Локальные данные хранятся в изолированном хранилище приложения</li>
+      </ul>
+    </div>
+
+    <div class="section" id="ru-5">
+      <div class="section-header">
+        <div class="section-icon">🤝</div>
+        <h2>5. Передача третьим лицам</h2>
+      </div>
+      <p>Мы используем следующие сервисы, которые могут обрабатывать данные согласно своим политикам:</p>
+      <ul class="list">
+        <li><strong>Yandex Geocoder API</strong> — определение адреса по координатам <span class="badge">Геоданные</span></li>
+        <li><strong>OpenStreetMap</strong> — отображение карты <span class="badge">Открытые данные</span></li>
+      </ul>
+      <p style="margin-top:14px;">Мы <strong>не продаём</strong> и <strong>не передаём</strong> ваши личные данные рекламным сетям или третьим лицам в коммерческих целях.</p>
+    </div>
+
+    <div class="section" id="ru-6">
+      <div class="section-header">
+        <div class="section-icon">👤</div>
+        <h2>6. Права пользователей</h2>
+      </div>
+      <p>Вы имеете право:</p>
+      <ul class="list">
+        <li>Запросить доступ к своим персональным данным</li>
+        <li>Запросить исправление неточных данных</li>
+        <li>Запросить удаление аккаунта и связанных данных</li>
+        <li>Отозвать разрешение на доступ к геопозиции в любое время через настройки устройства</li>
+      </ul>
+      <div class="highlight">
+        Для удаления аккаунта или всех данных — напишите нам на электронную почту, указанную в разделе «Контакты».
+      </div>
+    </div>
+
+    <div class="section" id="ru-7">
+      <div class="section-header">
+        <div class="section-icon">🍪</div>
+        <h2>7. Cookies и локальные данные</h2>
+      </div>
+      <p>Мобильное приложение не использует cookies в традиционном смысле. Для хранения сессии и настроек используются:</p>
+      <ul class="list">
+        <li>SharedPreferences — настройки приложения</li>
+        <li>Flutter Secure Storage — токены авторизации</li>
+        <li>ObjectBox — локальный кэш данных</li>
+      </ul>
+    </div>
+
+    <div class="section" id="ru-8">
+      <div class="section-header">
+        <div class="section-icon">👶</div>
+        <h2>8. Дети</h2>
+      </div>
+      <p>Приложение ArzonTOP не предназначено для детей младше 13 лет. Мы сознательно не собираем данные о детях. Если вы считаете, что ребёнок предоставил нам персональные данные — пожалуйста, свяжитесь с нами для удаления этих данных.</p>
+    </div>
+
+    <div class="section" id="ru-9">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <h2>9. Изменения политики</h2>
+      </div>
+      <p>Мы оставляем за собой право изменять настоящую Политику конфиденциальности. Актуальная версия всегда доступна по ссылке в приложении и на данной странице. Продолжение использования приложения после внесения изменений означает ваше согласие с обновлённой политикой.</p>
+    </div>
+
+    <div class="section" id="ru-10">
+      <div class="section-header">
+        <div class="section-icon">📬</div>
+        <h2>10. Контакты</h2>
+      </div>
+      <p>По вопросам, связанным с конфиденциальностью данных, вы можете обратиться к нам:</p>
+      <div class="contact-card">
+        <span class="icon">✉️</span>
+        <div>
+          <div style="font-size:13px; color:var(--muted); margin-bottom:2px;">Электронная почта</div>
+          <a href="mailto:arzontop@gmail.com">arzontop@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-card" style="margin-top:10px;">
+        <span class="icon">🌐</span>
+        <div>
+          <div style="font-size:13px; color:var(--muted); margin-bottom:2px;">Веб-сайт</div>
+          <a href="https://arzontop.uz">arzontop.uz</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- END RUSSIAN -->
+
+  <!-- ===== UZBEK ===== -->
+  <div class="lang-content" id="lang-uz">
+
+    <nav class="toc">
+      <h3>Mundarija</h3>
+      <ol>
+        <li><a href="#uz-1">Umumiy ma'lumot</a></li>
+        <li><a href="#uz-2">To'planadigan ma'lumotlar</a></li>
+        <li><a href="#uz-3">Ma'lumotlardan foydalanish</a></li>
+        <li><a href="#uz-4">Saqlash va xavfsizlik</a></li>
+        <li><a href="#uz-5">Uchinchi taraflarga uzatish</a></li>
+        <li><a href="#uz-6">Foydalanuvchi huquqlari</a></li>
+        <li><a href="#uz-7">Qurilmadagi ma'lumotlar</a></li>
+        <li><a href="#uz-8">Bolalar</a></li>
+        <li><a href="#uz-9">Siyosatdagi o'zgarishlar</a></li>
+        <li><a href="#uz-10">Aloqa</a></li>
+      </ol>
+    </nav>
+
+    <div class="section" id="uz-1">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <h2>1. Umumiy ma'lumot</h2>
+      </div>
+      <p><strong>ArzonTOP</strong> — O'zbekistonda dori va yaqin aptekalarni topish uchun mo'ljallangan ilova.</p>
+      <p>Ushbu Maxfiylik siyosati ilovamizdan foydalanishda qanday ma'lumotlar to'planishi, ishlatilishi va himoyalanishini tavsiflaydi.</p>
+      <div class="highlight">
+        ArzonTOP ilovasidan foydalanish orqali siz ushbu Siyosat shartlariga rozilik bildirasiz.
+      </div>
+    </div>
+
+    <div class="section" id="uz-2">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <h2>2. To'planadigan ma'lumotlar</h2>
+      </div>
+      <ul class="list">
+        <li><strong>Telefon raqami</strong> — OTP orqali ro'yxatdan o'tish va tizimga kirish uchun.</li>
+        <li><strong>Ism va familiya</strong> — profilda ixtiyoriy ravishda ko'rsatiladi.</li>
+        <li><strong>Geolokatsiya</strong> — yaqin aptekalarni ko'rsatish uchun. Faqat xarita funksiyalaridan foydalanilganda so'raladi.</li>
+        <li><strong>Sevimli dorilar va aptekalar</strong> — qurilmada mahalliy saqlanadi.</li>
+        <li><strong>Qidiruv tarixi</strong> — qurilmada mahalliy saqlanadi.</li>
+        <li><strong>Qurilma ma'lumotlari</strong> — OT versiyasi, qurilma modeli (diagnostika uchun anonim shaklda).</li>
+      </ul>
+      <p style="margin-top:16px; color: var(--muted); font-size:14px;">* Biz to'lov ma'lumotlari, parollar yoki biometrik ma'lumotlarni <strong>to'plamaymiz</strong>.</p>
+    </div>
+
+    <div class="section" id="uz-3">
+      <div class="section-header">
+        <div class="section-icon">🎯</div>
+        <h2>3. Ma'lumotlardan foydalanish</h2>
+      </div>
+      <ul class="list">
+        <li>Avtorizatsiya va hisob boshqaruvi</li>
+        <li>Xaritada yaqin aptekalar va takliflarni ko'rsatish</li>
+        <li>Natijalarni foydalanuvchi joylashuviga qarab saralash</li>
+        <li>Ilovani takomillashtirish va xatolarni bartaraf etish</li>
+        <li>Xizmat bilan bog'liq muhim bildirishnomalar yuborish</li>
+      </ul>
+    </div>
+
+    <div class="section" id="uz-4">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <h2>4. Saqlash va xavfsizlik</h2>
+      </div>
+      <ul class="list">
+        <li>Ma'lumotlar uzatish <strong>HTTPS</strong> protokoli orqali amalga oshiriladi</li>
+        <li>Avtorizatsiya tokenlari qurilmaning <strong>himoyalangan xotirasida</strong> saqlanadi (Keychain / Keystore)</li>
+        <li>Mahalliy ma'lumotlar ilovaning izolyatsiya qilingan xotirasida saqlanadi</li>
+      </ul>
+    </div>
+
+    <div class="section" id="uz-5">
+      <div class="section-header">
+        <div class="section-icon">🤝</div>
+        <h2>5. Uchinchi taraflarga uzatish</h2>
+      </div>
+      <ul class="list">
+        <li><strong>Yandex Geocoder API</strong> — koordinatalar bo'yicha manzilni aniqlash <span class="badge">Geodata</span></li>
+        <li><strong>OpenStreetMap</strong> — xaritani ko'rsatish <span class="badge">Ochiq ma'lumotlar</span></li>
+      </ul>
+      <p style="margin-top:14px;">Biz sizning shaxsiy ma'lumotlaringizni reklama tarmoqlari yoki uchinchi taraflarga tijorat maqsadida <strong>sotmaymiz</strong> va <strong>bermaymiz</strong>.</p>
+    </div>
+
+    <div class="section" id="uz-6">
+      <div class="section-header">
+        <div class="section-icon">👤</div>
+        <h2>6. Foydalanuvchi huquqlari</h2>
+      </div>
+      <ul class="list">
+        <li>Shaxsiy ma'lumotlaringizga kirish huquqi</li>
+        <li>Noto'g'ri ma'lumotlarni tuzatishni so'rash</li>
+        <li>Hisob va bog'liq ma'lumotlarni o'chirishni so'rash</li>
+        <li>Qurilma sozlamalari orqali geolokatsiyaga ruxsatni istalgan vaqt bekor qilish</li>
+      </ul>
+      <div class="highlight">
+        Hisobni yoki barcha ma'lumotlarni o'chirish uchun — "Aloqa" bo'limidagi elektron pochtaga yozing.
+      </div>
+    </div>
+
+    <div class="section" id="uz-7">
+      <div class="section-header">
+        <div class="section-icon">🍪</div>
+        <h2>7. Qurilmadagi ma'lumotlar</h2>
+      </div>
+      <ul class="list">
+        <li>SharedPreferences — ilova sozlamalari</li>
+        <li>Flutter Secure Storage — avtorizatsiya tokenlari</li>
+        <li>ObjectBox — mahalliy kesh</li>
+      </ul>
+    </div>
+
+    <div class="section" id="uz-8">
+      <div class="section-header">
+        <div class="section-icon">👶</div>
+        <h2>8. Bolalar</h2>
+      </div>
+      <p>ArzonTOP ilovasi 13 yoshdan kichik bolalar uchun mo'ljallanmagan. Agar bola shaxsiy ma'lumotlarini taqdim etgan deb hisoblasangiz — ularni o'chirish uchun biz bilan bog'laning.</p>
+    </div>
+
+    <div class="section" id="uz-9">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <h2>9. Siyosatdagi o'zgarishlar</h2>
+      </div>
+      <p>Biz ushbu Maxfiylik siyosatini o'zgartirish huquqini saqlaymiz. Joriy versiya doimo ushbu sahifada mavjud. O'zgartirishlardan so'ng ilovadan foydalanishni davom ettirish yangilangan siyosatga roziligingizni bildiradi.</p>
+    </div>
+
+    <div class="section" id="uz-10">
+      <div class="section-header">
+        <div class="section-icon">📬</div>
+        <h2>10. Aloqa</h2>
+      </div>
+      <div class="contact-card">
+        <span class="icon">✉️</span>
+        <div>
+          <div style="font-size:13px; color:var(--muted); margin-bottom:2px;">Elektron pochta</div>
+          <a href="mailto:arzontop@gmail.com">arzontop@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-card" style="margin-top:10px;">
+        <span class="icon">🌐</span>
+        <div>
+          <div style="font-size:13px; color:var(--muted); margin-bottom:2px;">Veb-sayt</div>
+          <a href="https://arzontop.uz">arzontop.uz</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- END UZBEK -->
+
+  <!-- ===== ENGLISH ===== -->
+  <div class="lang-content" id="lang-en">
+
+    <nav class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#en-1">Overview</a></li>
+        <li><a href="#en-2">Data We Collect</a></li>
+        <li><a href="#en-3">How We Use Data</a></li>
+        <li><a href="#en-4">Storage & Security</a></li>
+        <li><a href="#en-5">Third-Party Services</a></li>
+        <li><a href="#en-6">Your Rights</a></li>
+        <li><a href="#en-7">Local Storage</a></li>
+        <li><a href="#en-8">Children</a></li>
+        <li><a href="#en-9">Policy Changes</a></li>
+        <li><a href="#en-10">Contact</a></li>
+      </ol>
+    </nav>
+
+    <div class="section" id="en-1">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <h2>1. Overview</h2>
+      </div>
+      <p>Welcome to <strong>ArzonTOP</strong> — a mobile app for finding medicines and nearby pharmacies in Uzbekistan.</p>
+      <p>This Privacy Policy explains what data we collect, how we use it, and how we protect it when you use our app (Android / iOS).</p>
+      <div class="highlight">
+        By using ArzonTOP, you agree to the terms of this Privacy Policy.
+      </div>
+    </div>
+
+    <div class="section" id="en-2">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <h2>2. Data We Collect</h2>
+      </div>
+      <ul class="list">
+        <li><strong>Phone number</strong> — for registration and login via OTP.</li>
+        <li><strong>Name & surname</strong> — optionally provided in user profile.</li>
+        <li><strong>Location</strong> — to show nearby pharmacies. Requested only when using map features.</li>
+        <li><strong>Favourite medicines & pharmacies</strong> — stored locally on device.</li>
+        <li><strong>Search history</strong> — stored locally for convenience.</li>
+        <li><strong>Device info</strong> — OS version, device model (anonymised, for diagnostics).</li>
+      </ul>
+      <p style="margin-top:16px; color: var(--muted); font-size:14px;">* We do <strong>not</strong> collect payment data, passwords, or biometric information.</p>
+    </div>
+
+    <div class="section" id="en-3">
+      <div class="section-header">
+        <div class="section-icon">🎯</div>
+        <h2>3. How We Use Data</h2>
+      </div>
+      <ul class="list">
+        <li>Account creation and authentication</li>
+        <li>Displaying nearby pharmacies and offers on the map</li>
+        <li>Sorting results by distance from the user</li>
+        <li>Improving the app and fixing bugs</li>
+        <li>Sending important service-related notifications</li>
+      </ul>
+    </div>
+
+    <div class="section" id="en-4">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <h2>4. Storage & Security</h2>
+      </div>
+      <ul class="list">
+        <li>All data is transmitted over <strong>HTTPS</strong></li>
+        <li>Auth tokens are stored in the device's <strong>secure storage</strong> (Keychain / Keystore)</li>
+        <li>Local data is stored in the app's isolated storage</li>
+      </ul>
+    </div>
+
+    <div class="section" id="en-5">
+      <div class="section-header">
+        <div class="section-icon">🤝</div>
+        <h2>5. Third-Party Services</h2>
+      </div>
+      <ul class="list">
+        <li><strong>Yandex Geocoder API</strong> — reverse geocoding coordinates to address <span class="badge">Geodata</span></li>
+        <li><strong>OpenStreetMap</strong> — map tiles display <span class="badge">Open data</span></li>
+      </ul>
+      <p style="margin-top:14px;">We do <strong>not sell</strong> or share your personal data with advertising networks or third parties for commercial purposes.</p>
+    </div>
+
+    <div class="section" id="en-6">
+      <div class="section-header">
+        <div class="section-icon">👤</div>
+        <h2>6. Your Rights</h2>
+      </div>
+      <ul class="list">
+        <li>Request access to your personal data</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your account and associated data</li>
+        <li>Revoke location permission at any time via device settings</li>
+      </ul>
+      <div class="highlight">
+        To delete your account or all data — email us at the address in the Contact section.
+      </div>
+    </div>
+
+    <div class="section" id="en-7">
+      <div class="section-header">
+        <div class="section-icon">🍪</div>
+        <h2>7. Local Storage</h2>
+      </div>
+      <ul class="list">
+        <li>SharedPreferences — app settings</li>
+        <li>Flutter Secure Storage — auth tokens</li>
+        <li>ObjectBox — local data cache</li>
+      </ul>
+    </div>
+
+    <div class="section" id="en-8">
+      <div class="section-header">
+        <div class="section-icon">👶</div>
+        <h2>8. Children</h2>
+      </div>
+      <p>ArzonTOP is not intended for children under 13. We do not knowingly collect data from children. If you believe a child has provided us with personal data, please contact us for removal.</p>
+    </div>
+
+    <div class="section" id="en-9">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <h2>9. Policy Changes</h2>
+      </div>
+      <p>We reserve the right to update this Privacy Policy. The current version is always available on this page. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section" id="en-10">
+      <div class="section-header">
+        <div class="section-icon">📬</div>
+        <h2>10. Contact</h2>
+      </div>
+      <div class="contact-card">
+        <span class="icon">✉️</span>
+        <div>
+          <div style="font-size:13px; color:var(--muted); margin-bottom:2px;">Email</div>
+          <a href="mailto:arzontop@gmail.com">arzontop@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-card" style="margin-top:10px;">
+        <span class="icon">🌐</span>
+        <div>
+          <div style="font-size:13px; color:var(--muted); margin-bottom:2px;">Website</div>
+          <a href="https://arzontop.uz">arzontop.uz</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- END ENGLISH -->
+
+</div>
+
+<footer>
+  © 2026 ArzonTOP. Все права защищены.
+</footer>
+
+<script>
+  const labels = {
+    ru: { sub: 'Политика конфиденциальности', updated: 'Последнее обновление: 19 марта 2026 г.' },
+    uz: { sub: 'Maxfiylik siyosati', updated: "So'nggi yangilanish: 2026 yil 19 mart" },
+    en: { sub: 'Privacy Policy', updated: 'Last updated: March 19, 2026' },
+  };
+
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+    document.getElementById('header-sub').textContent = labels[lang].sub;
+    document.getElementById('updated-text').textContent = labels[lang].updated;
+  }
+</script>
+
+</body>
+</html>
