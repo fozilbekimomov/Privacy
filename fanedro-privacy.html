@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fanedro — Maxfiylik siyosati / Политика конфиденциальности / Privacy Policy</title>
+<meta name="description" content="Fanedro document scanner privacy policy. Your documents never leave your device.">
+<style>
+  :root {
+    --bg: #F5F8FA;
+    --surface: #FFFFFF;
+    --border: #DDE5EC;
+    --text: #141A21;
+    --muted: #616C78;
+    --primary: #1173A8;
+    --accent-bg: #DCEDF8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --surface: #0B1116;
+      --border: #1E2932;
+      --text: #E7EDF2;
+      --muted: #9AA6B2;
+      --primary: #74CDF0;
+      --accent-bg: #0C3346;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 72px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { padding: 40px 0 8px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 6px; }
+  h2 { font-size: 1.25rem; margin: 40px 0 10px; }
+  h3 { font-size: 1.02rem; margin: 24px 0 6px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); font-size: .92rem; }
+  a { color: var(--primary); }
+  nav.langs { display: flex; gap: 8px; margin: 18px 0 4px; flex-wrap: wrap; }
+  nav.langs button {
+    font: inherit; font-size: .92rem; cursor: pointer;
+    padding: 7px 15px; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  }
+  nav.langs button[aria-current="true"] {
+    background: var(--primary); border-color: var(--primary);
+    color: var(--bg); font-weight: 600;
+  }
+  .lead {
+    background: var(--accent-bg); border-radius: 14px;
+    padding: 16px 18px; margin: 22px 0 0;
+  }
+  .lead p { margin: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .93rem; display: block; overflow-x: auto; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-weight: 600; white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: 0; }
+  ul { padding-left: 20px; }
+  li { margin: 5px 0; }
+  footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); }
+  section[data-lang] { display: none; }
+  section[data-lang].active { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Fanedro</h1>
+  <p class="muted" id="subtitle">Maxfiylik siyosati</p>
+  <nav class="langs">
+    <button data-go="uz" aria-current="true">O‘zbekcha</button>
+    <button data-go="ru" aria-current="false">Русский</button>
+    <button data-go="en" aria-current="false">English</button>
+  </nav>
+</header>
+
+<!-- ======================= O'ZBEKCHA ======================= -->
+<section data-lang="uz" class="active">
+  <p class="muted">Oxirgi yangilanish: 2026-yil 16-avgust</p>
+
+  <div class="lead">
+    <p><strong>Hujjatlaringiz qurilmangizdan chiqmaydi.</strong> Fanedro’da server ham,
+    hisob ham, bulut ham yo‘q. Skanlar va PDF fayllar faqat telefoningizda,
+    shifrlangan bazada saqlanadi. Biz ularni ko‘rmaymiz va ko‘ra olmaymiz.</p>
+  </div>
+
+  <h2>1. Kim javobgar</h2>
+  <p>Fanedro ilovasini <strong>Fozilbek Imomov</strong> ishlab chiqadi va tarqatadi.
+  Maxfiylik bo‘yicha savollar uchun: <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a>.</p>
+
+  <h2>2. Biz yig‘MAYDIGAN ma’lumotlar</h2>
+  <p>Ilovaning o‘zi hech qanday ma’lumotni serverga yubormaydi — unda tarmoq
+  so‘rovlari umuman yo‘q. Aniqrog‘i, biz quyidagilarni <strong>olmaymiz</strong>:</p>
+  <ul>
+    <li>skanerlangan hujjatlar, suratlar va PDF fayllar — ular qurilmadan chiqmaydi;</li>
+    <li>hujjat nomlari, matnlari yoki ichidagi har qanday mazmun;</li>
+    <li>ism, elektron pochta, telefon raqami — ro‘yxatdan o‘tish yo‘q;</li>
+    <li>joylashuv;</li>
+    <li>kontaktlar, qo‘ng‘iroqlar, SMS.</li>
+  </ul>
+
+  <h2>3. Qurilmangizda nima saqlanadi</h2>
+  <ul>
+    <li><strong>Hujjatlar va sahifalar</strong> — <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>
+    yordamida AES-256 bilan shifrlangan bazada. Shifr kaliti tizimning himoyalangan
+    xotirasida (iOS Keychain / Android Keystore) turadi.</li>
+    <li><strong>Sozlamalar</strong> — til, mavzu, onboarding holati.</li>
+    <li><strong>Ilova qulfi</strong> — PIN kod shifrlangan holda saqlanadi. Barmoq izi
+    va Face ID ma’lumotlari ilovaga <em>umuman</em> uzatilmaydi: tekshiruvni
+    operatsion tizim bajaradi va bizga faqat «ha» yoki «yo‘q» qaytaradi.</li>
+  </ul>
+  <p>Ilovani o‘chirsangiz, bu ma’lumotlarning barchasi qurilmadan yo‘qoladi.
+  Fayl faqat siz «Ulashish» tugmasini bosganingizda va o‘zingiz tanlagan
+  ilovaga chiqadi.</p>
+
+  <h2>4. Uchinchi tomon xizmatlari</h2>
+  <p>Ilova ichida to‘rtta xizmat ishlaydi. Ular hujjatlaringizni ko‘rmaydi,
+  lekin texnik ma’lumot yig‘adi:</p>
+  <table>
+    <thead><tr><th>Xizmat</th><th>Nima yig‘adi</th><th>Nima uchun</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Google Firebase Analytics</td>
+        <td>Qurilma turi, OS versiyasi, til, ilova identifikatori va harakat
+        hodisalari: skan boshlandi, eksport tugadi, paywall ochildi</td>
+        <td>Qaysi funksiyalar ishlatilishini tushunish</td>
+      </tr>
+      <tr>
+        <td>Google Firebase Crashlytics</td>
+        <td>Yiqilish hisobotlari, xato izlari, qurilma modeli va OS versiyasi</td>
+        <td>Nosozliklarni topish va tuzatish</td>
+      </tr>
+      <tr>
+        <td>Google AdMob</td>
+        <td>Reklama identifikatori (IDFA / Android Advertising ID), qurilma va
+        taxminiy hudud ma’lumotlari</td>
+        <td>Mukofotli videoni ko‘rsatish</td>
+      </tr>
+      <tr>
+        <td>RevenueCat</td>
+        <td>Anonim ilova foydalanuvchi identifikatori, xarid fakti va uning
+        holati, qurilma turi</td>
+        <td>Xaridni tekshirish va Pro’ni ochish</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>Biz tasdiqlaymiz:</strong> ma’lumot ulashiladigan har bir uchinchi
+  tomon — yuqoridagi analitika vositalari, reklama tarmog‘i va SDK’lar —
+  foydalanuvchi ma’lumotlarini ushbu siyosatda ko‘rsatilgan darajada
+  <strong>xuddi shunday yoki teng darajada himoya qiladi</strong>. Ularning
+  o‘z siyosatlari:
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google maxfiylik siyosati</a> ·
+  <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google xizmatlaridan foydalanuvchi ilovalardagi ma’lumotlar</a> ·
+  <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a> ·
+  <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a>.</p>
+  <p class="muted">To‘lovni Google Play yoki App Store amalga oshiradi. Karta
+  ma’lumotlari ilovaga hech qachon tegmaydi — biz ularni ko‘rmaymiz.</p>
+
+  <h2>5. Reklama va kuzatuv</h2>
+  <p>Yagona reklama formati — <strong>mukofotli video</strong>, va u faqat siz
+  «Videoni ko‘rish» tugmasini bosganingizda chiqadi. Majburiy reklama yo‘q:
+  banner ham, to‘liq ekranli reklama ham yo‘q.</p>
+  <p><strong>iOS’da</strong> tizim «kuzatishga ruxsat» oynasini ko‘rsatadi.
+  Rad etsangiz reklama baribir ishlaydi — shunchaki shaxsiylashtirilmagan
+  bo‘ladi. Qaroringizni istalgan vaqtda o‘zgartirishingiz mumkin:
+  <em>Sozlamalar → Maxfiylik va xavfsizlik → Kuzatuv</em>.</p>
+  <p><strong>Android’da</strong> reklama identifikatorini o‘chirish mumkin:
+  <em>Sozlamalar → Google → Reklama</em>.</p>
+  <p>Yevropa Ittifoqi va Buyuk Britaniya foydalanuvchilariga Google’ning rozilik
+  oynasi ko‘rsatiladi; roziligingizni o‘sha oyna orqali qaytarib olishingiz mumkin.</p>
+
+  <h2>6. Ruxsatlar nima uchun so‘raladi</h2>
+  <table>
+    <thead><tr><th>Ruxsat</th><th>Nima uchun</th></tr></thead>
+    <tbody>
+      <tr><td>Kamera</td><td>Hujjatni skanerlash. Suratlar faqat qurilmada qoladi</td></tr>
+      <tr><td>Suratlar kutubxonasi</td><td>Galereyadagi rasmni PDF ga aylantirish va skanni saqlash</td></tr>
+      <tr><td>Face ID / barmoq izi</td><td>Ilova qulfini ochish</td></tr>
+      <tr><td>Internet</td><td>Faqat reklama, analitika va xarid tekshiruvi uchun. Hujjatlar hech qachon yuborilmaydi</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. Ma’lumotni saqlash va o‘chirish</h2>
+  <ul>
+    <li><strong>Qurilmadagi ma’lumot</strong> siz o‘chirmaguningizcha turadi.
+    Ilova ichida: <em>Sozlamalar → Xotira</em>, yoki ilovani butunlay
+    o‘chirib tashlang — hammasi yo‘qoladi.</li>
+    <li><strong>Uchinchi tomondagi ma’lumot</strong> ularning o‘z muddatlari
+    bo‘yicha saqlanadi. Uni o‘chirishni so‘rash uchun bizga yozing —
+    <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a> —
+    biz so‘rovni tegishli xizmatga yo‘naltiramiz.</li>
+  </ul>
+
+  <h2>8. Bolalar</h2>
+  <p>Fanedro bolalarga mo‘ljallanmagan. Biz <strong>13 yoshgacha</strong>, yoki
+  sizning mamlakatingizda amal qiladigan raqamli rozilik yoshiga yetmagan
+  shaxslardan ataylab ma’lumot yig‘maymiz — Yevropa Iqtisodiy Hududining
+  ayrim mamlakatlarida bu yosh <strong>16</strong> gacha ko‘tarilgan.</p>
+  <p>Agar bola ushbu ilova orqali bizga ma’lumot bergan deb hisoblasangiz,
+  <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a> ga
+  yozing — biz uni o‘chirtiramiz.</p>
+
+  <h2>9. O‘zgarishlar</h2>
+  <p>Siyosat o‘zgarsa, yuqoridagi sana yangilanadi. Muhim o‘zgarishlar haqida
+  ilova yangilanishi izohida xabar beramiz.</p>
+</section>
+
+<!-- ======================= РУССКИЙ ======================= -->
+<section data-lang="ru">
+  <p class="muted">Последнее обновление: 16 августа 2026 года</p>
+
+  <div class="lead">
+    <p><strong>Ваши документы не покидают устройство.</strong> У Fanedro нет
+    сервера, аккаунтов и облака. Сканы и PDF-файлы хранятся только на вашем
+    телефоне, в зашифрованной базе. Мы их не видим и не можем увидеть.</p>
+  </div>
+
+  <h2>1. Кто отвечает за данные</h2>
+  <p>Приложение Fanedro разрабатывает и распространяет <strong>Фозилбек Имомов</strong>.
+  Вопросы о конфиденциальности: <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a>.</p>
+
+  <h2>2. Что мы НЕ собираем</h2>
+  <p>Само приложение не отправляет никаких данных на сервер — в его коде нет
+  сетевых запросов. Мы <strong>не получаем</strong>:</p>
+  <ul>
+    <li>отсканированные документы, фотографии и PDF-файлы — они не покидают устройство;</li>
+    <li>названия документов, их текст и любое содержимое;</li>
+    <li>имя, электронную почту, номер телефона — регистрации нет;</li>
+    <li>геолокацию;</li>
+    <li>контакты, звонки, SMS.</li>
+  </ul>
+
+  <h2>3. Что хранится на вашем устройстве</h2>
+  <ul>
+    <li><strong>Документы и страницы</strong> — в базе, зашифрованной AES-256
+    средствами <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>.
+    Ключ шифрования лежит в защищённом хранилище системы (iOS Keychain / Android Keystore).</li>
+    <li><strong>Настройки</strong> — язык, тема, состояние онбординга.</li>
+    <li><strong>Блокировка приложения</strong> — PIN-код хранится в зашифрованном
+    виде. Данные отпечатка пальца и Face ID приложению <em>не передаются вообще</em>:
+    проверку выполняет операционная система и возвращает нам только «да» или «нет».</li>
+  </ul>
+  <p>При удалении приложения всё это исчезает с устройства. Файл покидает
+  телефон только когда вы сами нажимаете «Поделиться» и выбираете приложение.</p>
+
+  <h2>4. Сторонние сервисы</h2>
+  <p>Внутри приложения работают четыре сервиса. Они не видят ваши документы,
+  но собирают техническую информацию:</p>
+  <table>
+    <thead><tr><th>Сервис</th><th>Что собирает</th><th>Зачем</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Google Firebase Analytics</td>
+        <td>Тип устройства, версия ОС, язык, идентификатор установки и события
+        действий: начало сканирования, завершение экспорта, показ paywall</td>
+        <td>Понимать, какими функциями пользуются</td>
+      </tr>
+      <tr>
+        <td>Google Firebase Crashlytics</td>
+        <td>Отчёты о сбоях, трассировки ошибок, модель устройства и версия ОС</td>
+        <td>Находить и исправлять поломки</td>
+      </tr>
+      <tr>
+        <td>Google AdMob</td>
+        <td>Рекламный идентификатор (IDFA / Android Advertising ID), данные об
+        устройстве и приблизительном регионе</td>
+        <td>Показ вознаграждаемого видео</td>
+      </tr>
+      <tr>
+        <td>RevenueCat</td>
+        <td>Анонимный идентификатор пользователя приложения, факт и статус
+        покупки, тип устройства</td>
+        <td>Проверка покупки и разблокировка Pro</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>Мы подтверждаем:</strong> каждая третья сторона, которой
+  передаются данные — перечисленные выше аналитические инструменты, рекламная
+  сеть и SDK — обеспечивает <strong>такую же или равную защиту</strong>
+  пользовательских данных, как заявлено в этой политике. Их собственные
+  политики:
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Политика Google</a> ·
+  <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Как Google использует данные в приложениях-партнёрах</a> ·
+  <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a> ·
+  <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a>.</p>
+  <p class="muted">Платёж проводит Google Play или App Store. Данные карты
+  никогда не попадают в приложение — мы их не видим.</p>
+
+  <h2>5. Реклама и отслеживание</h2>
+  <p>Единственный формат рекламы — <strong>вознаграждаемое видео</strong>, и оно
+  появляется только когда вы сами нажимаете «Посмотреть видео». Принудительной
+  рекламы нет: ни баннеров, ни полноэкранных вставок.</p>
+  <p><strong>На iOS</strong> система показывает запрос разрешения на отслеживание.
+  Если отказать, реклама всё равно работает — просто становится
+  неперсонализированной. Решение можно изменить в любой момент:
+  <em>Настройки → Конфиденциальность и безопасность → Отслеживание</em>.</p>
+  <p><strong>На Android</strong> рекламный идентификатор можно удалить:
+  <em>Настройки → Google → Реклама</em>.</p>
+  <p>Пользователям из ЕЭЗ и Великобритании показывается форма согласия Google;
+  отозвать согласие можно через неё же.</p>
+
+  <h2>6. Зачем нужны разрешения</h2>
+  <table>
+    <thead><tr><th>Разрешение</th><th>Зачем</th></tr></thead>
+    <tbody>
+      <tr><td>Камера</td><td>Сканирование документа. Снимки остаются только на устройстве</td></tr>
+      <tr><td>Медиатека</td><td>Превратить фото из галереи в PDF и сохранить скан</td></tr>
+      <tr><td>Face ID / отпечаток</td><td>Разблокировка приложения</td></tr>
+      <tr><td>Интернет</td><td>Только для рекламы, аналитики и проверки покупки. Документы не отправляются никогда</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. Хранение и удаление данных</h2>
+  <ul>
+    <li><strong>Данные на устройстве</strong> хранятся, пока вы их не удалите.
+    В приложении: <em>Настройки → Хранилище</em>, либо удалите приложение
+    целиком — исчезнет всё.</li>
+    <li><strong>Данные у сторонних сервисов</strong> хранятся по их собственным
+    срокам. Чтобы запросить удаление, напишите нам —
+    <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a> —
+    мы передадим запрос соответствующему сервису.</li>
+  </ul>
+
+  <h2>8. Дети</h2>
+  <p>Fanedro не предназначено для детей. Мы намеренно не собираем данные лиц
+  младше <strong>13 лет</strong> или младше возраста цифрового согласия,
+  действующего в вашей стране — в ряде стран Европейской экономической зоны
+  он повышен до <strong>16 лет</strong>.</p>
+  <p>Если вы полагаете, что ребёнок передал нам данные через это приложение,
+  напишите на <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a>,
+  и мы добьёмся их удаления.</p>
+
+  <h2>9. Изменения</h2>
+  <p>При изменении политики обновляется дата выше. О существенных изменениях
+  сообщим в описании обновления приложения.</p>
+</section>
+
+<!-- ======================= ENGLISH ======================= -->
+<section data-lang="en">
+  <p class="muted">Last updated: 16 August 2026</p>
+
+  <div class="lead">
+    <p><strong>Your documents never leave your device.</strong> Fanedro has no
+    server, no accounts and no cloud. Scans and PDFs are stored only on your
+    phone, in an encrypted database. We do not see them and cannot see them.</p>
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>Fanedro is developed and distributed by <strong>Fozilbek Imomov</strong>.
+  For privacy questions: <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a>.</p>
+
+  <h2>2. What we do NOT collect</h2>
+  <p>The app itself sends nothing to any server — its code contains no network
+  requests at all. We <strong>never receive</strong>:</p>
+  <ul>
+    <li>scanned documents, photos or PDF files — they do not leave the device;</li>
+    <li>document titles, their text, or any content inside them;</li>
+    <li>your name, email or phone number — there is no sign-up;</li>
+    <li>your location;</li>
+    <li>contacts, calls or messages.</li>
+  </ul>
+
+  <h2>3. What is stored on your device</h2>
+  <ul>
+    <li><strong>Documents and pages</strong> — in a database encrypted with
+    AES-256 via <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>.
+    The encryption key lives in the system’s secure storage (iOS Keychain /
+    Android Keystore).</li>
+    <li><strong>Settings</strong> — language, theme, onboarding state.</li>
+    <li><strong>App lock</strong> — your PIN is stored encrypted. Fingerprint and
+    Face ID data is <em>never</em> given to the app: the operating system performs
+    the check and returns only a yes or no.</li>
+  </ul>
+  <p>Deleting the app removes all of this from the device. A file leaves your
+  phone only when you tap Share yourself and choose where to send it.</p>
+
+  <h2>4. Third-party services</h2>
+  <p>Four services run inside the app. They cannot see your documents, but they
+  do collect technical information:</p>
+  <table>
+    <thead><tr><th>Service</th><th>What it collects</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Google Firebase Analytics</td>
+        <td>Device type, OS version, language, an app instance identifier, and
+        interaction events such as scan started, export completed, paywall shown</td>
+        <td>To understand which features are used</td>
+      </tr>
+      <tr>
+        <td>Google Firebase Crashlytics</td>
+        <td>Crash reports, stack traces, device model and OS version</td>
+        <td>To find and fix failures</td>
+      </tr>
+      <tr>
+        <td>Google AdMob</td>
+        <td>Advertising identifier (IDFA / Android Advertising ID), device data
+        and approximate region</td>
+        <td>To serve the rewarded video</td>
+      </tr>
+      <tr>
+        <td>RevenueCat</td>
+        <td>An anonymous app user identifier, the fact and status of a purchase,
+        device type</td>
+        <td>To verify purchases and unlock Pro</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>We confirm</strong> that every third party with whom data is
+  shared — the analytics tools, advertising network and SDKs listed above —
+  provides <strong>the same or equal protection</strong> of user data as stated
+  in this privacy policy. Their own policies:
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> ·
+  <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use our services</a> ·
+  <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase</a> ·
+  <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a>.</p>
+  <p class="muted">Payment is handled by Google Play or the App Store. Card
+  details never reach the app — we do not see them.</p>
+
+  <h2>5. Advertising and tracking</h2>
+  <p>The only ad format is a <strong>rewarded video</strong>, and it appears only
+  when you tap “Watch a video” yourself. There is no forced advertising — no
+  banners and no full-screen interstitials.</p>
+  <p><strong>On iOS</strong> the system shows a tracking permission prompt. If you
+  decline, ads still work — they simply become non-personalised. You can change
+  your choice at any time in
+  <em>Settings → Privacy &amp; Security → Tracking</em>.</p>
+  <p><strong>On Android</strong> you can delete the advertising identifier in
+  <em>Settings → Google → Ads</em>.</p>
+  <p>Users in the EEA and the UK are shown Google’s consent form, and can
+  withdraw consent through the same form.</p>
+
+  <h2>6. Why each permission is requested</h2>
+  <table>
+    <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Camera</td><td>To scan a document. Images stay on the device</td></tr>
+      <tr><td>Photo library</td><td>To turn a gallery photo into a PDF and to save scans</td></tr>
+      <tr><td>Face ID / fingerprint</td><td>To unlock the app</td></tr>
+      <tr><td>Internet</td><td>Only for ads, analytics and purchase verification. Documents are never uploaded</td></tr>
+    </tbody>
+  </table>
+
+  <h2>7. Retention and deletion</h2>
+  <ul>
+    <li><strong>Data on your device</strong> is kept until you delete it. In the
+    app: <em>Settings → Storage</em>, or delete the app entirely and everything
+    goes with it.</li>
+    <li><strong>Data held by third parties</strong> is kept according to their own
+    retention periods. To request deletion, write to us at
+    <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a> and we
+    will pass the request to the relevant service.</li>
+  </ul>
+
+  <h2>8. Children</h2>
+  <p>Fanedro is not directed at children. We do not knowingly collect data from
+  anyone under <strong>13</strong>, or under the age of digital consent that
+  applies in their country — in parts of the European Economic Area that age is
+  raised to <strong>16</strong>.</p>
+  <p>If you believe a child has provided us with data through this app, write to
+  <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a> and we
+  will have it deleted.</p>
+
+  <h2>9. Changes</h2>
+  <p>If this policy changes, the date above is updated. We will note significant
+  changes in the app’s release notes.</p>
+</section>
+
+<footer>
+  <p class="muted">Fanedro · <span id="footer-note">Hujjatlaringiz faqat sizniki.</span></p>
+</footer>
+
+</div>
+
+<script>
+  var SUBTITLES = {
+    uz: ['Maxfiylik siyosati', 'Hujjatlaringiz faqat sizniki.'],
+    ru: ['Политика конфиденциальности', 'Ваши документы принадлежат только вам.'],
+    en: ['Privacy Policy', 'Your documents are yours alone.']
+  };
+
+  function show(lang) {
+    document.querySelectorAll('section[data-lang]').forEach(function (s) {
+      s.classList.toggle('active', s.dataset.lang === lang);
+    });
+    document.querySelectorAll('nav.langs button').forEach(function (b) {
+      b.setAttribute('aria-current', String(b.dataset.go === lang));
+    });
+    document.documentElement.lang = lang;
+    document.getElementById('subtitle').textContent = SUBTITLES[lang][0];
+    document.getElementById('footer-note').textContent = SUBTITLES[lang][1];
+    if (location.hash.slice(1) !== lang) history.replaceState(null, '', '#' + lang);
+  }
+
+  document.querySelectorAll('nav.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.go); });
+  });
+
+  // Havolada til ko'rsatilgan bo'lsa o'shani, aks holda brauzer tilini olamiz.
+  var fromHash = location.hash.slice(1);
+  var browser = (navigator.language || 'uz').slice(0, 2);
+  show(SUBTITLES[fromHash] ? fromHash : (SUBTITLES[browser] ? browser : 'uz'));
+</script>
+
+</body>
+</html>
