@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fanedro — Yordam / Поддержка / Support</title>
+<meta name="description" content="Fanedro document scanner — support and frequently asked questions.">
+<style>
+  :root {
+    --bg: #F5F8FA; --surface: #FFFFFF; --border: #DDE5EC;
+    --text: #141A21; --muted: #616C78; --primary: #1173A8; --accent-bg: #DCEDF8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000; --surface: #0B1116; --border: #1E2932;
+      --text: #E7EDF2; --muted: #9AA6B2; --primary: #74CDF0; --accent-bg: #0C3346;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 20px 72px; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { padding: 40px 0 8px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 6px; }
+  h2 { font-size: 1.25rem; margin: 38px 0 10px; }
+  h3 { font-size: 1.02rem; margin: 22px 0 4px; }
+  .muted { color: var(--muted); font-size: .92rem; }
+  a { color: var(--primary); }
+  nav.langs { display: flex; gap: 8px; margin: 18px 0 4px; flex-wrap: wrap; }
+  nav.langs button {
+    font: inherit; font-size: .92rem; cursor: pointer; padding: 7px 15px;
+    border-radius: 999px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text);
+  }
+  nav.langs button[aria-current="true"] {
+    background: var(--primary); border-color: var(--primary);
+    color: var(--bg); font-weight: 600;
+  }
+  .lead { background: var(--accent-bg); border-radius: 14px; padding: 16px 18px; margin: 22px 0 0; }
+  .lead p { margin: 0; }
+  .contact {
+    border: 1px solid var(--border); border-radius: 14px;
+    padding: 16px 18px; margin: 26px 0 0; background: var(--surface);
+  }
+  .contact p { margin: 0 0 4px; }
+  ul { padding-left: 20px; } li { margin: 5px 0; }
+  footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); }
+  section[data-lang] { display: none; }
+  section[data-lang].active { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Fanedro</h1>
+  <p class="muted" id="subtitle">Yordam</p>
+  <nav class="langs">
+    <button data-go="uz" aria-current="true">O‘zbekcha</button>
+    <button data-go="ru" aria-current="false">Русский</button>
+    <button data-go="en" aria-current="false">English</button>
+  </nav>
+</header>
+
+<!-- ======================= O'ZBEKCHA ======================= -->
+<section data-lang="uz" class="active">
+  <div class="lead">
+    <p>Fanedro — telefoningizni hujjat skaneriga aylantiradigan ilova.
+    Internetsiz ishlaydi, ro‘yxatdan o‘tish talab qilmaydi, hujjatlaringiz
+    qurilmangizdan chiqmaydi.</p>
+  </div>
+
+  <div class="contact">
+    <p><strong>Savolingiz bormi?</strong></p>
+    <p><a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a></p>
+    <p class="muted">Odatda bir-ikki ish kuni ichida javob beramiz. Xat yozganda
+    telefon modeli va iOS versiyasini ko‘rsatsangiz, tezroq hal qilamiz.</p>
+  </div>
+
+  <h2>Ko‘p so‘raladigan savollar</h2>
+
+  <h3>Hujjatlarim qayerda saqlanadi?</h3>
+  <p>Faqat telefoningizda, shifrlangan bazada. Bulut yo‘q, server yo‘q. Fayl
+  siz «Ulashish» tugmasini bosganingizdagina chiqadi.</p>
+
+  <h3>Ilovani o‘chirsam nima bo‘ladi?</h3>
+  <p>Hamma hujjat ham o‘chib ketadi va uni tiklab bo‘lmaydi. Shuning uchun
+  avval <em>Sozlamalar → Zaxira arxiv</em> orqali hammasini bitta faylga
+  saqlang.</p>
+
+  <h3>Skanerlash chetlarni topmayapti</h3>
+  <p>Yorug‘likni tekshiring va hujjatni bir rangli fonga qo‘ying — oq qog‘oz
+  oq stolda turganda chegara ko‘rinmaydi. Kamera hujjatga tik tutilsa natija
+  ham yaxshiroq bo‘ladi.</p>
+
+  <h3>Pro nimani ochadi?</h3>
+  <p>Ikkita vosita: <strong>sahifalarga ajratish</strong> va
+  <strong>PDF ga parol qo‘yish</strong>. Skanerlash, filtrlar, birlashtirish,
+  siqish va eksport — hammasi bepul va cheksiz, suv belgisi ham qo‘yilmaydi.</p>
+
+  <h3>Kartam yo‘q, Pro vositani ochsam bo‘ladimi?</h3>
+  <p>Ha. Paywall ekranida «Videoni ko‘rish» tugmasi bor — qisqa video
+  ko‘rganingizdan keyin vosita bir marta ochiladi.</p>
+
+  <h3>Xaridni qanday tiklayman?</h3>
+  <p>Paywall ekranining yuqorisidagi <em>«Xaridni tiklash»</em> tugmasini
+  bosing. Telefon almashtirgan bo‘lsangiz ham, xarid o‘sha Apple ID ga
+  bog‘langan bo‘lsa, tiklanadi.</p>
+
+  <h3>Ma’lumotlarimni qanday o‘chiraman?</h3>
+  <p><em>Sozlamalar → Xotira</em> bo‘limida hammasini o‘chirish mumkin. Yoki
+  ilovani butunlay olib tashlang. Analitika tomonidagi ma’lumotni o‘chirish
+  uchun bizga yozing.</p>
+
+  <h3>Reklama rozilignimni o‘zgartirmoqchiman</h3>
+  <p><em>Sozlamalar → Reklama roziligi</em>. Bu band rozilik so‘raladigan
+  hududlarda ko‘rinadi. iOS’da kuzatuv tanlovini
+  <em>Sozlamalar → Maxfiylik va xavfsizlik → Kuzatuv</em> dan ham
+  o‘zgartirsangiz bo‘ladi.</p>
+</section>
+
+<!-- ======================= РУССКИЙ ======================= -->
+<section data-lang="ru">
+  <div class="lead">
+    <p>Fanedro превращает телефон в сканер документов. Работает без интернета,
+    не требует регистрации, документы не покидают устройство.</p>
+  </div>
+
+  <div class="contact">
+    <p><strong>Остались вопросы?</strong></p>
+    <p><a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a></p>
+    <p class="muted">Обычно отвечаем в течение одного-двух рабочих дней. Укажите
+    в письме модель телефона и версию iOS — так разберёмся быстрее.</p>
+  </div>
+
+  <h2>Частые вопросы</h2>
+
+  <h3>Где хранятся мои документы?</h3>
+  <p>Только на вашем телефоне, в зашифрованной базе. Ни облака, ни сервера.
+  Файл покидает устройство только когда вы сами нажимаете «Поделиться».</p>
+
+  <h3>Что будет, если удалить приложение?</h3>
+  <p>Все документы исчезнут безвозвратно. Поэтому сначала сохраните всё одним
+  файлом: <em>Настройки → Резервный архив</em>.</p>
+
+  <h3>Сканер не находит края</h3>
+  <p>Проверьте освещение и положите документ на однотонный фон — белый лист на
+  белом столе не даёт границы. Держите камеру прямо над документом.</p>
+
+  <h3>Что открывает Pro?</h3>
+  <p>Два инструмента: <strong>разделение на страницы</strong> и
+  <strong>пароль на PDF</strong>. Сканирование, фильтры, объединение, сжатие и
+  экспорт бесплатны и без ограничений, водяных знаков нет.</p>
+
+  <h3>У меня нет карты. Можно открыть Pro-инструмент?</h3>
+  <p>Да. На экране Pro есть кнопка «Посмотреть видео» — после короткого ролика
+  инструмент открывается на одно действие.</p>
+
+  <h3>Как восстановить покупку?</h3>
+  <p>Кнопка <em>«Восстановить покупку»</em> вверху экрана Pro. Работает и после
+  смены телефона, если покупка сделана на том же Apple ID.</p>
+
+  <h3>Как удалить свои данные?</h3>
+  <p><em>Настройки → Хранилище</em> — там можно стереть всё. Либо удалите
+  приложение целиком. Чтобы запросить удаление данных на стороне аналитики,
+  напишите нам.</p>
+
+  <h3>Хочу изменить согласие на рекламу</h3>
+  <p><em>Настройки → Согласие на рекламу</em>. Пункт появляется там, где
+  согласие запрашивается. На iOS выбор по отслеживанию меняется также в
+  <em>Настройки → Конфиденциальность и безопасность → Отслеживание</em>.</p>
+</section>
+
+<!-- ======================= ENGLISH ======================= -->
+<section data-lang="en">
+  <div class="lead">
+    <p>Fanedro turns your phone into a document scanner. It works offline,
+    needs no sign-up, and your documents never leave the device.</p>
+  </div>
+
+  <div class="contact">
+    <p><strong>Need help?</strong></p>
+    <p><a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a></p>
+    <p class="muted">We usually reply within one or two working days. Mention
+    your phone model and iOS version and we will get there faster.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>Where are my documents stored?</h3>
+  <p>Only on your phone, in an encrypted database. No cloud, no server. A file
+  leaves the device only when you tap Share yourself.</p>
+
+  <h3>What happens if I delete the app?</h3>
+  <p>Every document goes with it and cannot be recovered. Save everything into
+  a single file first: <em>Settings → Backup archive</em>.</p>
+
+  <h3>The scanner is not finding the edges</h3>
+  <p>Check the lighting and place the document on a plain background — white
+  paper on a white desk gives no edge to find. Hold the camera square to the
+  page.</p>
+
+  <h3>What does Pro unlock?</h3>
+  <p>Two tools: <strong>splitting pages</strong> and
+  <strong>password-protecting a PDF</strong>. Scanning, filters, merging,
+  compression and export are free and unlimited, with no watermark.</p>
+
+  <h3>I have no card. Can I still use a Pro tool?</h3>
+  <p>Yes. The Pro screen has a “Watch a video” button — after a short video the
+  tool unlocks for one use.</p>
+
+  <h3>How do I restore a purchase?</h3>
+  <p>Tap <em>Restore purchase</em> at the top of the Pro screen. It works after
+  changing phones too, as long as the purchase was made with the same Apple ID.</p>
+
+  <h3>How do I delete my data?</h3>
+  <p><em>Settings → Storage</em> lets you erase everything, or delete the app
+  entirely. To request deletion of analytics-side data, write to us.</p>
+
+  <h3>I want to change my ad consent</h3>
+  <p><em>Settings → Ad consent</em>. The row appears where consent is gathered.
+  On iOS you can also change your tracking choice in
+  <em>Settings → Privacy &amp; Security → Tracking</em>.</p>
+</section>
+
+<footer>
+  <p class="muted">Fanedro · <a href="../privacy/" id="privacy-link">Maxfiylik siyosati</a></p>
+</footer>
+
+</div>
+
+<script>
+  var T = {
+    uz: ['Yordam', 'Maxfiylik siyosati'],
+    ru: ['Поддержка', 'Политика конфиденциальности'],
+    en: ['Support', 'Privacy Policy']
+  };
+
+  function show(lang) {
+    document.querySelectorAll('section[data-lang]').forEach(function (s) {
+      s.classList.toggle('active', s.dataset.lang === lang);
+    });
+    document.querySelectorAll('nav.langs button').forEach(function (b) {
+      b.setAttribute('aria-current', String(b.dataset.go === lang));
+    });
+    document.documentElement.lang = lang;
+    document.getElementById('subtitle').textContent = T[lang][0];
+    document.getElementById('privacy-link').textContent = T[lang][1];
+    if (location.hash.slice(1) !== lang) history.replaceState(null, '', '#' + lang);
+  }
+
+  document.querySelectorAll('nav.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.go); });
+  });
+
+  var fromHash = location.hash.slice(1);
+  var browser = (navigator.language || 'uz').slice(0, 2);
+  show(T[fromHash] ? fromHash : (T[browser] ? browser : 'uz'));
+</script>
+
+</body>
+</html>
