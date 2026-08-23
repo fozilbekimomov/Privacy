@@ -84,7 +84,7 @@
 
 <!-- ======================= O'ZBEKCHA ======================= -->
 <section data-lang="uz" class="active">
-  <p class="muted">Oxirgi yangilanish: 2026-yil 16-avgust</p>
+  <p class="muted">Oxirgi yangilanish: 2026-yil 23-avgust</p>
 
   <div class="lead">
     <p><strong>Hujjatlaringiz qurilmangizdan chiqmaydi.</strong> Fanedro’da server ham,
@@ -97,8 +97,11 @@
   Maxfiylik bo‘yicha savollar uchun: <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a>.</p>
 
   <h2>2. Biz yig‘MAYDIGAN ma’lumotlar</h2>
-  <p>Ilovaning o‘zi hech qanday ma’lumotni serverga yubormaydi — unda tarmoq
-  so‘rovlari umuman yo‘q. Aniqrog‘i, biz quyidagilarni <strong>olmaymiz</strong>:</p>
+  <p>Bizning o‘z serverimiz yo‘q va ilova hujjatlaringizni hech qayerga
+  yubormaydi. Ilovada tarmoqqa chiqadigan yagona narsa — quyida 4-bo‘limda
+  sanalgan uchinchi tomon xizmatlari (tahlil, yiqilish hisobotlari, reklama,
+  xaridlar va sozlamalarni yangilash). Ular hujjatlaringizni ko‘rmaydi.
+  Aniqrog‘i, biz quyidagilarni <strong>olmaymiz</strong>:</p>
   <ul>
     <li>skanerlangan hujjatlar, suratlar va PDF fayllar — ular qurilmadan chiqmaydi;</li>
     <li>hujjat nomlari, matnlari yoki ichidagi har qanday mazmun;</li>
@@ -109,20 +112,38 @@
 
   <h2>3. Qurilmangizda nima saqlanadi</h2>
   <ul>
-    <li><strong>Hujjatlar va sahifalar</strong> — <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>
+    <li><strong>Hujjatlar ro‘yxati</strong> — sarlavhalar, papkalar, sahifa
+    tartibi va yo‘llari <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>
     yordamida AES-256 bilan shifrlangan bazada. Shifr kaliti tizimning himoyalangan
     xotirasida (iOS Keychain / Android Keystore) turadi.</li>
+    <li><strong>Sahifa rasmlari</strong> — ilovaning shaxsiy katalogida, oddiy
+    fayl sifatida. Ular boshqa ilovalarga ko‘rinmaydi va galereyaga tushmaydi,
+    lekin fayllarning O‘ZI shifrlanmagan: shifrlangan narsa — yuqoridagi
+    ro‘yxat.</li>
+    <li><strong>Saqlangan muhr va imzolar</strong> — xuddi shu tarzda,
+    ilovaning shaxsiy katalogida, oddiy tasvir fayli sifatida.</li>
     <li><strong>Sozlamalar</strong> — til, mavzu, onboarding holati.</li>
-    <li><strong>Ilova qulfi</strong> — PIN kod shifrlangan holda saqlanadi. Barmoq izi
+    <li><strong>Ilova qulfi</strong> — PIN kodning O‘ZI saqlanmaydi: tasodifiy
+    tuz bilan SHA-256 hash qilinadi va faqat hash yoziladi. Barmoq izi
     va Face ID ma’lumotlari ilovaga <em>umuman</em> uzatilmaydi: tekshiruvni
     operatsion tizim bajaradi va bizga faqat «ha» yoki «yo‘q» qaytaradi.</li>
   </ul>
   <p>Ilovani o‘chirsangiz, bu ma’lumotlarning barchasi qurilmadan yo‘qoladi.
   Fayl faqat siz «Ulashish» tugmasini bosganingizda va o‘zingiz tanlagan
   ilovaga chiqadi.</p>
+  <p><strong>Zaxira arxivi.</strong> «Sozlamalar → Zaxira arxivi» da siz
+  o‘zingiz bitta ZIP fayl yasaysiz: unda hujjatlar, sahifalar hamda saqlangan
+  muhr va imzolar bo‘ladi. Bu arxiv <strong>parol bilan yopilmagan</strong> —
+  uni ochgan har kim mazmunini ko‘radi. Arxivni qayerda saqlash va kimga
+  berishni faqat siz hal qilasiz; u hech qayerga o‘z-o‘zidan yuborilmaydi.</p>
+  <p><strong>Qurilma zaxirasi.</strong> Android’da ilova ma’lumotlari tizim
+  zaxirasiga <em>kiritilmaydi</em> (<code>allowBackup=false</code>). iPhone’da
+  esa ilovaning fayllari, boshqa ilovalarniki kabi, sizning shaxsiy iCloud yoki
+  kompyuter zaxirangizga tushishi mumkin — bu sizning zaxirangiz va sizning
+  Apple hisobingiz, bizda unga kirish yo‘q.</p>
 
   <h2>4. Uchinchi tomon xizmatlari</h2>
-  <p>Ilova ichida to‘rtta xizmat ishlaydi. Ular hujjatlaringizni ko‘rmaydi,
+  <p>Ilova ichida beshta xizmat ishlaydi. Ular hujjatlaringizni ko‘rmaydi,
   lekin texnik ma’lumot yig‘adi:</p>
   <table>
     <thead><tr><th>Xizmat</th><th>Nima yig‘adi</th><th>Nima uchun</th></tr></thead>
@@ -137,6 +158,12 @@
         <td>Google Firebase Crashlytics</td>
         <td>Yiqilish hisobotlari, xato izlari, qurilma modeli va OS versiyasi</td>
         <td>Nosozliklarni topish va tuzatish</td>
+      </tr>
+      <tr>
+        <td>Google Firebase Remote Config</td>
+        <td>Ilova versiyasi va qurilma turi; javob sifatida sozlamalar keladi
+        (masalan, «Bizning ilovalar» ro‘yxati va yangilanish haqidagi xabar)</td>
+        <td>Reliz chiqarmasdan matn va ro‘yxatlarni yangilash</td>
       </tr>
       <tr>
         <td>Google AdMob</td>
@@ -215,7 +242,7 @@
 
 <!-- ======================= РУССКИЙ ======================= -->
 <section data-lang="ru">
-  <p class="muted">Последнее обновление: 16 августа 2026 года</p>
+  <p class="muted">Последнее обновление: 23 августа 2026 года</p>
 
   <div class="lead">
     <p><strong>Ваши документы не покидают устройство.</strong> У Fanedro нет
@@ -228,8 +255,10 @@
   Вопросы о конфиденциальности: <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a>.</p>
 
   <h2>2. Что мы НЕ собираем</h2>
-  <p>Само приложение не отправляет никаких данных на сервер — в его коде нет
-  сетевых запросов. Мы <strong>не получаем</strong>:</p>
+  <p>У нас нет собственного сервера, и приложение никуда не отправляет ваши
+  документы. Единственное, что выходит в сеть, — сторонние сервисы из раздела 4
+  (аналитика, отчёты о сбоях, реклама, покупки и обновление настроек). Ваших
+  документов они не видят. Конкретно, мы <strong>не получаем</strong>:</p>
   <ul>
     <li>отсканированные документы, фотографии и PDF-файлы — они не покидают устройство;</li>
     <li>названия документов, их текст и любое содержимое;</li>
@@ -240,19 +269,36 @@
 
   <h2>3. Что хранится на вашем устройстве</h2>
   <ul>
-    <li><strong>Документы и страницы</strong> — в базе, зашифрованной AES-256
-    средствами <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>.
+    <li><strong>Список документов</strong> — названия, папки, порядок и пути
+    страниц в базе, зашифрованной AES-256 средствами
+    <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>.
     Ключ шифрования лежит в защищённом хранилище системы (iOS Keychain / Android Keystore).</li>
+    <li><strong>Изображения страниц</strong> — в приватной папке приложения,
+    обычными файлами. Они не видны другим приложениям и не попадают в галерею,
+    но сами файлы не зашифрованы: шифруется список выше.</li>
+    <li><strong>Сохранённые печати и подписи</strong> — там же, в приватной
+    папке приложения, обычными файлами изображений.</li>
     <li><strong>Настройки</strong> — язык, тема, состояние онбординга.</li>
-    <li><strong>Блокировка приложения</strong> — PIN-код хранится в зашифрованном
-    виде. Данные отпечатка пальца и Face ID приложению <em>не передаются вообще</em>:
+    <li><strong>Блокировка приложения</strong> — сам PIN-код не хранится: от него
+    берётся SHA-256 со случайной солью, и записывается только этот хеш.
+    Данные отпечатка пальца и Face ID приложению <em>не передаются вообще</em>:
     проверку выполняет операционная система и возвращает нам только «да» или «нет».</li>
   </ul>
   <p>При удалении приложения всё это исчезает с устройства. Файл покидает
   телефон только когда вы сами нажимаете «Поделиться» и выбираете приложение.</p>
+  <p><strong>Резервный архив.</strong> В «Настройки → Резервный архив» вы сами
+  создаёте один ZIP-файл: в нём документы, страницы, а также сохранённые печати
+  и подписи. Этот архив <strong>не защищён паролем</strong> — любой, кто его
+  откроет, увидит содержимое. Где его хранить и кому передавать, решаете
+  только вы; сам по себе он никуда не отправляется.</p>
+  <p><strong>Резервная копия устройства.</strong> На Android данные приложения
+  <em>исключены</em> из системного бэкапа (<code>allowBackup=false</code>). На
+  iPhone файлы приложения, как и у других приложений, могут попасть в вашу
+  личную резервную копию iCloud или компьютера — это ваша копия и ваша учётная
+  запись Apple, у нас к ней доступа нет.</p>
 
   <h2>4. Сторонние сервисы</h2>
-  <p>Внутри приложения работают четыре сервиса. Они не видят ваши документы,
+  <p>Внутри приложения работают пять сервисов. Они не видят ваши документы,
   но собирают техническую информацию:</p>
   <table>
     <thead><tr><th>Сервис</th><th>Что собирает</th><th>Зачем</th></tr></thead>
@@ -267,6 +313,12 @@
         <td>Google Firebase Crashlytics</td>
         <td>Отчёты о сбоях, трассировки ошибок, модель устройства и версия ОС</td>
         <td>Находить и исправлять поломки</td>
+      </tr>
+      <tr>
+        <td>Google Firebase Remote Config</td>
+        <td>Версия приложения и тип устройства; в ответ приходят настройки
+        (например, список «Наши приложения» и сообщение об обновлении)</td>
+        <td>Обновлять тексты и списки без выпуска новой версии</td>
       </tr>
       <tr>
         <td>Google AdMob</td>
@@ -345,7 +397,7 @@
 
 <!-- ======================= ENGLISH ======================= -->
 <section data-lang="en">
-  <p class="muted">Last updated: 16 August 2026</p>
+  <p class="muted">Last updated: 23 August 2026</p>
 
   <div class="lead">
     <p><strong>Your documents never leave your device.</strong> Fanedro has no
@@ -358,8 +410,11 @@
   For privacy questions: <a href="mailto:fozilbekimomov@gmail.com">fozilbekimomov@gmail.com</a>.</p>
 
   <h2>2. What we do NOT collect</h2>
-  <p>The app itself sends nothing to any server — its code contains no network
-  requests at all. We <strong>never receive</strong>:</p>
+  <p>We have no server of our own, and the app never sends your documents
+  anywhere. The only things that reach the network are the third-party services
+  listed in section 4 (analytics, crash reports, ads, purchases and settings
+  updates). None of them can see your documents. Specifically, we
+  <strong>never receive</strong>:</p>
   <ul>
     <li>scanned documents, photos or PDF files — they do not leave the device;</li>
     <li>document titles, their text, or any content inside them;</li>
@@ -370,20 +425,39 @@
 
   <h2>3. What is stored on your device</h2>
   <ul>
-    <li><strong>Documents and pages</strong> — in a database encrypted with
-    AES-256 via <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>.
+    <li><strong>The document index</strong> — titles, folders, page order and
+    page paths, in a database encrypted with AES-256 via
+    <a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLCipher</a>.
     The encryption key lives in the system’s secure storage (iOS Keychain /
     Android Keystore).</li>
+    <li><strong>Page images</strong> — in the app’s private directory, as
+    ordinary files. They are not visible to other apps and never appear in your
+    photo gallery, but the files themselves are not encrypted: what is
+    encrypted is the index above.</li>
+    <li><strong>Saved stamps and signatures</strong> — in the same place, as
+    ordinary image files.</li>
     <li><strong>Settings</strong> — language, theme, onboarding state.</li>
-    <li><strong>App lock</strong> — your PIN is stored encrypted. Fingerprint and
-    Face ID data is <em>never</em> given to the app: the operating system performs
-    the check and returns only a yes or no.</li>
+    <li><strong>App lock</strong> — the PIN itself is not stored: it is hashed
+    with SHA-256 and a random salt, and only that hash is written. Fingerprint
+    and Face ID data is <em>never</em> given to the app: the operating system
+    performs the check and returns only a yes or no.</li>
   </ul>
   <p>Deleting the app removes all of this from the device. A file leaves your
   phone only when you tap Share yourself and choose where to send it.</p>
+  <p><strong>The backup archive.</strong> Under Settings → Backup archive you
+  create a single ZIP file yourself: it holds your documents, pages and your
+  saved stamps and signatures. That archive is <strong>not password
+  protected</strong> — anyone who opens it sees the contents. Where you keep it
+  and who you give it to is entirely your decision; it is never sent anywhere
+  on its own.</p>
+  <p><strong>Device backup.</strong> On Android the app’s data is
+  <em>excluded</em> from the system backup (<code>allowBackup=false</code>). On
+  iPhone the app’s files may, like those of any other app, be included in your
+  own iCloud or computer backup — that is your backup and your Apple account,
+  and we have no access to it.</p>
 
   <h2>4. Third-party services</h2>
-  <p>Four services run inside the app. They cannot see your documents, but they
+  <p>Five services run inside the app. They cannot see your documents, but they
   do collect technical information:</p>
   <table>
     <thead><tr><th>Service</th><th>What it collects</th><th>Why</th></tr></thead>
@@ -398,6 +472,12 @@
         <td>Google Firebase Crashlytics</td>
         <td>Crash reports, stack traces, device model and OS version</td>
         <td>To find and fix failures</td>
+      </tr>
+      <tr>
+        <td>Google Firebase Remote Config</td>
+        <td>App version and device type; the reply carries settings such as the
+        “Our apps” list and the update notice</td>
+        <td>Update texts and lists without shipping a new release</td>
       </tr>
       <tr>
         <td>Google AdMob</td>
